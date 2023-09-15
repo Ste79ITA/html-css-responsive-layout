@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+/* PALETTE COLORI */
+
+:root {
+  --blue: #0084fd;
+  --light-blue: #b5ddff;
+  --purple: #9792e4;
+  --orange: #fdc15f;
+  --dark-grey: #333333;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* HEADER */
+
+.page-header {
+  background-color: var(--blue);
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 37px;
+}
+
+.header-col {
+  padding: 17px 0;
+}
+
+.nav-menu {
+  display: none;
+}
+
+/* UTILITY */
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  border-radius: 999px;
+  padding: 0 16px;
+}
+
+/* CONTAINER */
+
+.container-l {
+  max-width: 1138px;
+  margin: 0 auto;
+}
+
+.container-m {
+  max-width: 1048px;
+  margin: 0 auto;
+}
+
+.container-s {
+  max-width: 876px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* COLUMNS */
+
+.col-4 {
+  flex-basis: calc((100% / 12) * 4);
+}
+
+.col-8 {
+  flex-basis: calc((100% / 12) * 8);
+}
+
+.col-12 {
+  flex-basis: calc((100% / 12) * 12);
+}
+
+/* DEBUG */
+
+.debug [class^='container-'] {
+  border: 1px solid orangered;
+  padding: 10px;
+}
+
+.debug .row {
+  border: 1px solid orange;
+  padding: 10px;
+}
+
+.debug [class^='col'] {
+  border: 1px solid greenyellow;
+  padding: 10px;
+}
+
+/* RESPONSIVE */
+
+/* DESKTOP */
+/* MOBILE */
+@media screen and (max-width: 100%) {
+  .header-col {
+    padding: 0 32px;
+  }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: block;
+  }
+  .nav-items,
+  .header-button {
+    display: none;
+    line-height: 23px;
+  }
+  .header-col {
+    padding: 17px 18px;
+  }
+  .container-l {
+    max-width: 745px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 576px) {
+  .container-l {
+    max-width: 313px;
+  }
+
+  .header-col {
+    padding: 17px 0;
+  }
+}
