@@ -45,7 +45,7 @@ figure img {
 
 .page-header {
   background-color: var(--blue);
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 }
 
 .nav-list {
@@ -81,14 +81,13 @@ figure img {
 .card-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 40px 25px;
   font-weight: 700;
-  max-width: 400px;
 }
 
 .card-text .header {
   color: var(--blue);
+  text-align: center;
   font-size: 20px;
   padding-bottom: 25px;
 }
@@ -96,7 +95,6 @@ figure img {
   color: var(--grey-text);
   font-size: 16px;
   line-height: 2em;
-  padding-bottom: 30px;
 }
 
 .card-button.button {
@@ -107,14 +105,22 @@ figure img {
   font-size: 20px;
   font-weight: 400;
   line-height: 44px;
-  margin-bottom: 25px;
+  margin-top: 25px;
   padding: 0 60px;
+  white-space: nowrap;
 }
 
 .card-image {
   display: flex;
   align-items: end;
   max-width: 36%;
+  margin-right: 60px;
+}
+
+.header-image {
+  text-align: center;
+  font-size: 70px;
+  padding-bottom: 30px;
 }
 
 /* UTILITY */
@@ -131,8 +137,16 @@ figure img {
   align-items: center;
 }
 
+.align-start {
+  align-items: start;
+}
+
 .flex {
   display: flex;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .button {
@@ -141,6 +155,7 @@ figure img {
   font-size: 16px;
   border-radius: 999px;
   padding: 0 16px;
+  white-space: nowrap;
 }
 
 /* CONTAINER */
@@ -207,6 +222,7 @@ figure img {
 
 /* TABLET */
 @media screen and (max-width: 768px) {
+  /* HEADER */
   .nav-menu {
     display: block;
   }
@@ -221,6 +237,15 @@ figure img {
   .container-l {
     max-width: 745px;
   }
+
+  /* HERO */
+
+  .hero .col-8 .card {
+    display: block;
+  }
+  .card-image {
+    max-width: 63%;
+  }
 }
 
 /* MOBILE */
@@ -231,5 +256,9 @@ figure img {
 
   .header-col {
     padding: 17px 0;
+  }
+
+  .hero[class*='col'] {
+    width: 100%;
   }
 }
