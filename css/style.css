@@ -20,7 +20,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 figure img {
@@ -95,6 +95,10 @@ figure img {
   color: var(--grey-text);
   font-size: 16px;
   line-height: 2em;
+}
+
+.col-8 .card-text .body {
+  max-width: 85%;
 }
 
 .card-button.button {
@@ -241,10 +245,12 @@ figure img {
   /* HERO */
 
   .hero .col-8 .card {
-    display: block;
+    /* display: block; */
+    flex-direction: column;
   }
-  .card-image {
-    max-width: 63%;
+  .card-image img {
+    width: 250px;
+    margin-left: 35px;
   }
 }
 
@@ -258,7 +264,19 @@ figure img {
     padding: 17px 0;
   }
 
+  /* HERO */
+
   .hero[class*='col'] {
-    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero[class*='col-'] {
+    padding: 12px 0;
+  }
+  .hero .row {
+    display: block;
+  }
+  .card-image {
+    margin-right: 0;
   }
 }
