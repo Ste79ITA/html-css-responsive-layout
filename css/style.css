@@ -20,12 +20,17 @@ a {
 }
 
 img {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 figure img {
   display: block;
   width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* PALETTE COLORI */
@@ -66,6 +71,10 @@ figure img {
 }
 
 /* HERO */
+
+.hero .container-l {
+  margin-bottom: 104px;
+}
 
 .hero[class*='col-'] {
   display: flex;
@@ -127,6 +136,61 @@ figure img {
   padding-bottom: 30px;
 }
 
+/* ADVERTISING */
+
+.advertising {
+  background-color: var(--purple);
+}
+
+.advertising .card-2 {
+  padding: 0 32px;
+  border-radius: 20px;
+}
+
+.card-2 .body {
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+.card-2.white {
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 310px;
+  margin-bottom: 64px;
+}
+.card-2.white .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-2.white .body {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.card-2.purple {
+  color: var(--white);
+  margin-top: 120px;
+  margin-bottom: 64px;
+}
+
+.card-2.purple .title {
+  font-weight: bold;
+  font-size: 28px;
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.body-arrow {
+  background-color: var(--purple);
+  line-height: 50px;
+  border-radius: 50%;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
 /* UTILITY */
 
 .space-between {
@@ -162,6 +226,10 @@ figure img {
   white-space: nowrap;
 }
 
+.white {
+  background-color: var(--white);
+}
+
 /* CONTAINER */
 
 .container-l {
@@ -175,7 +243,7 @@ figure img {
 }
 
 .container-s {
-  max-width: 876px;
+  max-width: 1004px;
   margin: 0 auto;
 }
 
@@ -188,6 +256,10 @@ figure img {
 
 .col-4 {
   flex-basis: calc((100% / 12) * 4);
+}
+
+.col-6 {
+  flex-basis: calc((100% / 12) * 6);
 }
 
 .col-8 {
@@ -252,12 +324,27 @@ figure img {
     width: 250px;
     margin-left: 35px;
   }
+
+  /* ADVERTISING */
+
+  .advertising .row {
+    flex-direction: column;
+  }
+
+  .advertising .container-s {
+    width: 745px;
+  }
+  .advertising .card-2.white {
+    margin-top: 0;
+  }
 }
 
 /* MOBILE */
 @media screen and (max-width: 576px) {
+  /* HEADER */
+
   .container-l {
-    max-width: 313px;
+    width: 313px;
   }
 
   .header-col {
@@ -278,5 +365,18 @@ figure img {
   }
   .card-image {
     margin-right: 0;
+  }
+
+  /* ADVERTISING */
+
+  .advertising .row {
+    flex-direction: column;
+  }
+
+  .advertising .container-s {
+    width: 313px;
+  }
+  .advertising .card-2.white {
+    margin-top: 0;
   }
 }
